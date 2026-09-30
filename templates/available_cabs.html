@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center mb-5">
+🚖 Available Cabs
+</h1>
+
+<div class="row">
+
+{% for cab in cabs %}
+
+<div class="col-md-4 mb-4">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h3>{{ cab.cab_name }}</h3>
+
+<p>
+<b>Driver :</b> {{ cab.driver_name }}
+</p>
+
+<p>
+<b>Car Number :</b> {{ cab.car_number }}
+</p>
+
+<p>
+<b>Price :</b> ₹{{ cab.price_per_km }}/km
+</p>
+
+{% if cab.is_available %}
+
+<span class="badge bg-success">
+Available
+</span>
+
+{% else %}
+
+<span class="badge bg-danger">
+Not Available
+</span>
+
+{% endif %}
+
+<br><br>
+
+<a href="/booking/" class="btn btn-primary w-100">
+Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

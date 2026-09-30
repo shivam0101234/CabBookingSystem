@@ -1,0 +1,273 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+.hero-section {
+    background: linear-gradient(135deg, #07111f, #0b2545, #123e68);
+    color: white;
+    border-radius: 24px;
+    padding: 80px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 174, 255, 0.15);
+    border-radius: 50%;
+    top: -120px;
+    right: -80px;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(0, 110, 255, 0.12);
+    border-radius: 50%;
+    bottom: -100px;
+    left: -70px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    color: #b9d8f5;
+    font-size: 1.2rem;
+}
+
+.btn-primary-custom {
+    background: #168cff;
+    border: none;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background: #006fd6;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 1px solid #7cc8ff;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background: #168cff;
+    border-color: #168cff;
+    color: white;
+}
+
+.feature-card {
+    border: none;
+    border-radius: 18px;
+    padding: 30px 20px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+.feature-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.feature-title {
+    font-weight: 700;
+    color: #102a43;
+}
+
+.feature-text {
+    color: #6c757d;
+}
+
+.section-title {
+    font-weight: 800;
+    color: #102a43;
+}
+
+</style>
+
+
+<div class="container mt-4">
+
+    <!-- HERO SECTION -->
+
+    <div class="hero-section text-center">
+
+        <div class="hero-content">
+
+            <div class="mb-3" style="font-size: 3rem;">
+                🚖
+            </div>
+
+            <h1 class="hero-title">
+                Cab Booking System
+            </h1>
+
+            <p class="hero-subtitle mt-3">
+                Fast, reliable and convenient cab booking at your fingertips.
+            </p>
+
+            <p class="hero-subtitle">
+                Choose your ride and travel with ease.
+            </p>
+
+            <div class="mt-4">
+
+                <a href="/booking/"
+                   class="btn btn-primary-custom me-2">
+                    🚕 Book a Ride
+                </a>
+
+                <a href="/bookings/"
+                   class="btn btn-outline-custom">
+                    📋 My Bookings
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FEATURES -->
+
+    <div class="text-center mt-5 mb-4">
+
+        <h2 class="section-title">
+            Why Choose Our Service?
+        </h2>
+
+        <p class="text-muted">
+            Simple, secure and efficient cab booking experience.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="feature-card text-center">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h4 class="feature-title">
+                    Fast Booking
+                </h4>
+
+                <p class="feature-text mt-3">
+                    Book your cab quickly with our simple and easy-to-use
+                    booking system.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="feature-card text-center">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <h4 class="feature-title">
+                    Safe & Reliable
+                </h4>
+
+                <p class="feature-text mt-3">
+                    Get assigned cabs with registered driver and vehicle
+                    details for a reliable journey.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="feature-card text-center">
+
+                <div class="feature-icon">
+                    💰
+                </div>
+
+                <h4 class="feature-title">
+                    Affordable Travel
+                </h4>
+
+                <p class="feature-text mt-3">
+                    Choose from different cab categories designed for
+                    convenient and affordable travel.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CALL TO ACTION -->
+
+    <div class="text-center mt-5 mb-4">
+
+        <h3 class="fw-bold">
+            Ready to start your journey?
+        </h3>
+
+        <p class="text-muted">
+            Book your cab now and enjoy a smooth travel experience.
+        </p>
+
+        <a href="/booking/"
+           class="btn btn-primary btn-lg px-4">
+            🚖 Book Your Ride
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
